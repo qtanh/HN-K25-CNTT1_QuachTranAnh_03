@@ -64,22 +64,20 @@ int main(){
 				printf("\n");
 				break;
 			case 5:
-				printf("Nhap gia tri cua phan tu can chen: ");
-				scanf("%d",&valueInsert);
-				int newNumbers[indexInsert+1];
-		for(i=0; i< indexInsert; i++){
-			if(i<size){
-				newArr[i]=arr[i];
-			}else{
-				newArr[i] = 0;
-			}
-		}
-		newNumbers[indexInsert] = valueInsert;
-		printf("Mang moi sau khi chen phan tu vao la:\n");
-		for(i=0; i<indexInsert+1; i++){
-			printf("%d\t",newNumbers[i]);
-		}
-				break;
+				printf("Nhap gia tri cua phan tu can chen vao cuoi mang: ");
+			scanf("%d", &valueInsert) ;
+					if(size >= 100){
+					printf("Loi: Mang da day (toi da 100 phan tu), khong the them.\n");
+				} else {
+					arr[size] = valueInsert;
+					size++;
+					printf("Da them phan tu %d vao cuoi mang.\n", valueInsert);
+					printf("Mang moi sau khi chen phan tu vao la:\n");
+					for(i=0; i<size; i++){
+						printf("%d\t",arr[i]);
+					}
+					printf("\n");
+				}
 			case 6:
 				printf("Nhap vao vi tri phan tu muon xoa: ");
 				scanf("%d",&select);
